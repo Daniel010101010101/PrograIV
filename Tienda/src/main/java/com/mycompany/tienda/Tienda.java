@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Tienda {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         Scanner sc = new Scanner(System.in);
         int numClientes = 10;
         
@@ -21,19 +20,19 @@ public class Tienda {
             System.out.print("Ingrese la cantidad de docenas a comprar: ");
             int docenas = sc.nextInt();
             
-            double precioUnitario = 100.0; // Precio unitario del producto
+            double precioUnitario = 100.0;
             double montoCompra = 0.0;
             double descuento = 0.0;
             int unidadesObsequio = 0;
             
             if (docenas >= 3) {
-                montoCompra = docenas * 12 * precioUnitario; // Precio por docena
-                descuento = montoCompra * 0.15; // 15% de descuento
+                montoCompra = docenas * 12 * precioUnitario; 
+                descuento = montoCompra * 0.15; 
                 unidadesObsequio = (docenas - 3) * 12; // Una unidad por cada docena en exceso sobre 3
             } else {
-                montoCompra = docenas * 12 * precioUnitario; // Precio por docena
-                descuento = montoCompra * 0.10; // 10% de descuento
-                unidadesObsequio = 0; // No hay unidades de obsequio
+                montoCompra = docenas * 12 * precioUnitario; 
+                descuento = montoCompra * 0.10; 
+                unidadesObsequio = 0; 
             }
             
             double totalPagar = montoCompra - descuento;
